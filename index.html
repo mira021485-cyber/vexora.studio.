@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="VEXORA STUDIO — creative design, branding, animation, video production, and visual enhancement.">
+  <title>VEXORA STUDIO — Visual Excellence</title>
+  <style>
+    :root{--bg:#080808;--panel:#11110f;--gold:#d6b46a;--gold2:#f3dfa5;--text:#f4f1e9;--muted:#aaa69b;--line:rgba(214,180,106,.24)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(8,8,8,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.12em;font-size:14px}
+    .monogram{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold2);font-family:Georgia,serif;font-size:24px;font-weight:400}
+    nav{display:flex;gap:24px;color:#d0ccc2;font-size:13px}
+    nav a:hover,.textlink:hover{color:var(--gold2)}
+    .btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:12px 18px;border:1px solid var(--gold);color:#100e09;background:linear-gradient(135deg,var(--gold2),var(--gold));font-weight:750;font-size:13px;letter-spacing:.02em;transition:.2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .btn.ghost{background:transparent;color:var(--gold2)}
+    .hero{padding:100px 0 88px;position:relative;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero:before{content:"V";position:absolute;right:-20px;top:-150px;font:500 520px/1 Georgia,serif;color:rgba(214,180,106,.035);pointer-events:none}
+    .eyebrow{color:var(--gold);font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800}
+    h1{font-size:clamp(42px,7vw,82px);line-height:1.02;letter-spacing:-.055em;max-width:820px;margin:20px 0}
+    h1 span{color:var(--gold2);font-family:Georgia,serif;font-weight:400;font-style:italic}
+    .lead{max-width:620px;color:var(--muted);font-size:17px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-note{display:flex;gap:28px;flex-wrap:wrap;margin-top:48px;color:#c7c1b4;font-size:12px}
+    .hero-note span:before{content:"✦";color:var(--gold);margin-right:8px}
+    section{padding:78px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+    h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.04em;line-height:1.15;margin:8px 0}
+    .sub{color:var(--muted);max-width:570px;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{padding:24px;background:linear-gradient(145deg,#141411,#0d0d0c);border:1px solid var(--line);min-height:185px}
+    .icon{font-family:Georgia,serif;font-size:25px;color:var(--gold);margin-bottom:15px}
+    .card h3{margin:0 0 8px;font-size:17px}
+    .card p{margin:0;color:var(--muted);font-size:13px}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .work{min-height:210px;border:1px solid var(--line);padding:20px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 80% 20%,rgba(214,180,106,.18),transparent 45%),linear-gradient(135deg,#181714,#090909)}
+    .work:nth-child(2){background:radial-gradient(circle at 20% 80%,rgba(214,180,106,.15),transparent 45%),linear-gradient(135deg,#101010,#1b1914)}
+    .work:nth-child(3){background:radial-gradient(circle at 70% 80%,rgba(214,180,106,.14),transparent 40%),linear-gradient(135deg,#181714,#090909)}
+    .work .label{font-size:10px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
+    .work strong{font:400 30px/1.1 Georgia,serif;max-width:220px}
+    .work small{color:var(--muted)}
+    .price-note{padding:20px;border:1px dashed var(--line);color:var(--muted);font-size:13px}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .about-panel{border:1px solid var(--line);padding:32px;background:linear-gradient(145deg,#171611,#0b0b0a)}
+    .about-panel .bigV{font:150px/.9 Georgia,serif;color:var(--gold);text-align:center;opacity:.9}
+    .checks{list-style:none;padding:0;margin:22px 0 0}
+    .checks li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);color:#d6d0c3;font-size:14px}
+    .checks li:before{content:"✓";color:var(--gold);margin-right:12px}
+    .contact{background:linear-gradient(120deg,#17150f,#0b0b0a);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .contact-box{display:flex;align-items:center;justify-content:space-between;gap:25px}
+    footer{padding:28px 0;color:#8f8a7e;font-size:12px}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .notice{color:#a6a092;font-size:11px;margin-top:15px}
+    @media(max-width:760px){nav{display:none}.hero{padding:72px 0 60px}.grid,.portfolio{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}.contact-box{align-items:flex-start;flex-direction:column}.section-head{display:block}.hero:before{font-size:350px;right:-80px;top:-50px}}
+    @media(max-width:480px){.wrap{width:min(100% - 28px,1120px)}.grid,.portfolio{grid-template-columns:1fr}.card{min-height:0}.hero-note{gap:12px;flex-direction:column}.btn{width:100%}.actions{flex-direction:column}.about-panel .bigV{font-size:110px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="VEXORA STUDIO beranda"><span class="monogram">V</span><span>VEXORA<br>STUDIO</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#services">Layanan</a><a href="#portfolio">Portofolio</a><a href="#about">Tentang</a><a href="#contact">Kontak</a>
+    </nav>
+    <a class="btn" href="#contact">Mulai Proyek ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div class="eyebrow">Independent Creative Studio</div>
+      <h1>Turning Ideas Into<br><span>Visual Excellence.</span></h1>
+      <p class="lead">Kami membantu mengubah ide menjadi karya visual yang berkarakter—mulai dari desain dan identitas merek hingga animasi serta produksi video.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Konsultasikan Proyek ↗</a>
+        <a class="btn ghost" href="#services">Jelajahi Layanan</a>
+      </div>
+      <div class="hero-note"><span>Desain & Branding</span><span>Motion & Video</span><span>Visual Enhancement</span></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">What We Do</div><h2>Layanan Kreatif</h2></div>
+        <p class="sub">Solusi visual untuk kebutuhan personal, kreator konten, komunitas, dan bisnis.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">✳</div><h3>Desain & Branding</h3><p>Poster, banner, materi promosi, dan visual identitas merek yang konsisten.</p></article>
+        <article class="card"><div class="icon">V</div><h3>Logo & Identitas</h3><p>Konsep logo dan aset visual untuk bisnis, kreator, komunitas, atau tim gaming.</p></article>
+        <article class="card"><div class="icon">◈</div><h3>Animasi & Motion</h3><p>Visual bergerak, intro, efek, dan animasi pendek untuk memperkuat cerita.</p></article>
+        <article class="card"><div class="icon">▶</div><h3>Video Pendek</h3><p>Konten vertikal untuk TikTok, Reels, Shorts, dan kebutuhan promosi.</p></article>
+        <article class="card"><div class="icon">▣</div><h3>Produksi Video</h3><p>Video cerita, presentasi, dan konten berdurasi panjang sesuai ruang lingkup proyek.</p></article>
+        <article class="card"><div class="icon">✧</div><h3>Visual Enhancement</h3><p>Peningkatan kualitas foto dan video, penyesuaian tampilan, serta penyempurnaan visual.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Selected Work</div><h2>Portofolio</h2></div>
+        <p class="sub">Ruang untuk menampilkan karya pilihan. Ganti contoh di bawah dengan hasil proyek asli sebelum mempromosikan situs.</p>
+      </div>
+      <div class="portfolio">
+        <article class="work"><span class="label">01 / Branding</span><strong>Identity<br>in Detail</strong><small>Logo & visual identity</small></article>
+        <article class="work"><span class="label">02 / Motion</span><strong>Movement<br>with Meaning</strong><small>Animation & motion design</small></article>
+        <article class="work"><span class="label">03 / Production</span><strong>Stories<br>in Motion</strong><small>Short & long-form video</small></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="eyebrow">The Studio</div>
+        <h2>Detail yang tepat.<br><span style="font-family:Georgia,serif;font-weight:400;font-style:italic;color:var(--gold2)">Visual yang berkesan.</span></h2>
+        <p class="sub">VEXORA STUDIO adalah studio kreatif yang berfokus pada kebutuhan visual dengan pendekatan yang terarah, komunikasi yang jelas, dan hasil yang disesuaikan dengan tujuan proyek.</p>
+        <ul class="checks"><li>Brief dan kebutuhan dibahas sebelum pengerjaan</li><li>Ruang lingkup dan estimasi waktu dikonfirmasi di awal</li><li>Hasil akhir disesuaikan dengan spesifikasi yang disepakati</li></ul>
+      </div>
+      <div class="about-panel"><div class="bigV">V</div><div class="eyebrow" style="text-align:center">VEXORA STUDIO</div><p style="text-align:center;color:var(--muted);font-size:13px">Turning Ideas Into Visual Excellence.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-box">
+      <div><div class="eyebrow">Have a Project?</div><h2>Mari wujudkan ide Anda.</h2><p class="sub">Ceritakan kebutuhan, referensi, dan tenggat waktu proyek. Kami akan membantu membahas langkah berikutnya.</p></div>
+      <a class="btn" id="whatsappLink" href="https://wa.me/6283160107605" target="_blank" rel="noopener">Hubungi via WhatsApp ↗</a>
+    </div>
+    <div class="wrap notice">WhatsApp: <a class="textlink" href="https://wa.me/6283160107605" target="_blank" rel="noopener">083160107605</a> · Klik nomor untuk menghubungi VEXORA STUDIO.</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot"><span>© <span id="year"></span> VEXORA STUDIO. All rights reserved.</span><span>Design • Branding • Motion • Video</span></div>
+</footer>
+<script>
+  // Nomor WhatsApp VEXORA STUDIO: 083160107605
+  // Tautan WhatsApp: https://wa.me/6283160107605
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
